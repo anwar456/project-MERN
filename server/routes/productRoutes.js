@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Product } = require("../models/Product");
 
-router.post("/", (req, res) => {
+router.get("/", (req, res) => {
   const skip = parseInt(req.body.skip);
   const filters = req.body.filters;
   Product.find(filters)
