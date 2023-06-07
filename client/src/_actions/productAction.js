@@ -6,7 +6,7 @@ export default function useProducts() {
   const dispatch = useDispatch();
   const getProductList = (query) => {
     const result = axios
-      .post("http://localhost:4000/products", query)
+      .get("http://localhost:4000/products", query)
       .then((res) => {
         // console.log(res.data);
         return res.data;
