@@ -18,7 +18,7 @@ export default function useCarts() {
 
   const addToCart = (data) => {
     const result = axios
-      .post("http://localhost:4000/carts/addToCart", data, config)
+      .post("https://project-mern.vercel.app/carts/addToCart", data, config)
       .then((res) => {
         // console.log(res.data);
         return res.data;
@@ -34,7 +34,7 @@ export default function useCarts() {
 
   const updateCartItem = (data) => {
     const result = axios
-      .put("http://localhost:4000/carts/updateCartItem", data, config)
+      .put("https://project-mern.vercel.app/carts/updateCartItem", data, config)
       .then((res) => {
         // console.log(res.data);
         return res.data;
@@ -51,7 +51,7 @@ export default function useCarts() {
   const removeCartItem = (productId) => {
     const result = axios
       .put(
-        `http://localhost:4000/carts/removeCartItem/${productId}`,
+        `https://project-mern.vercel.app/carts/removeCartItem/${productId}`,
         false,
         config
       )
@@ -70,7 +70,7 @@ export default function useCarts() {
 
   const getCartItems = () => {
     const result = axios
-      .get("http://localhost:4000/carts", config)
+      .get("https://project-mern.vercel.app/carts", config)
       .then((res) => {
         return res.data;
       })

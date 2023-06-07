@@ -16,7 +16,7 @@ export default function useCustomer() {
   };
   const customerRegister = (data) => {
     const request = axios
-      .post("http://localhost:4000/customers/register", data)
+      .post("https://project-mern.vercel.app/customers/register", data)
       .then((res) => {
         return res.data;
       })
@@ -31,7 +31,7 @@ export default function useCustomer() {
 
   const customerLogin = (data) => {
     const request = axios
-      .post("http://localhost:4000/customers/login", data)
+      .post("https://project-mern.vercel.app/customers/login", data)
       .then((res) => res.data)
       .catch((err) => err.response.data);
 
@@ -43,7 +43,7 @@ export default function useCustomer() {
 
   const customerAuth = () => {
     const request = axios
-      .get("http://localhost:4000/customers/authUser", config)
+      .get("https://project-mern.vercel.app/customers/authUser", config)
       .then((res) => {
         return res.data;
       })
@@ -56,7 +56,7 @@ export default function useCustomer() {
 
   const customerLogout = () => {
     const request = axios
-      .get("http://localhost:4000/customers/logout", config)
+      .get("https://project-mern.vercel.app/customers/logout", config)
       .then((res) => {
         return res.data;
       })
@@ -69,7 +69,11 @@ export default function useCustomer() {
 
   const customerChangePassword = (data) => {
     const request = axios
-      .put("http://localhost:4000/customers/changePassword", data, config)
+      .put(
+        "https://project-mern.vercel.app/customers/changePassword",
+        data,
+        config
+      )
       .then((res) => {
         return res.data;
       })
@@ -82,7 +86,7 @@ export default function useCustomer() {
 
   const customerForgotPassword = (data) => {
     const request = axios
-      .put("http://localhost:4000/customers/forgotPassword", data)
+      .put("https://project-mern.vercel.app/customers/forgotPassword", data)
       .then((res) => res.data)
       .catch((err) => err.response.data);
 
@@ -94,7 +98,10 @@ export default function useCustomer() {
 
   const customerResetPassword = (token, data) => {
     const request = axios
-      .put(`http://localhost:4000/customers/resetPassword/${token}`, data)
+      .put(
+        `https://project-mern.vercel.app/customers/resetPassword/${token}`,
+        data
+      )
       .then((res) => res.data)
       .catch((err) => err.response.data);
 

@@ -12,7 +12,7 @@ export default function useOrders() {
 
   const checkout = (data) => {
     const result = axios
-      .post("http://localhost:4000/orders/checkout", data, config)
+      .post("https://project-mern.vercel.app/orders/checkout", data, config)
       .then((res) => {
         return res.data;
       })
@@ -27,7 +27,7 @@ export default function useOrders() {
 
   const getOrderHistory = () => {
     const result = axios
-      .get("http://localhost:4000/orders/orderHistory", config)
+      .get("https://project-mern.vercel.app/orders/orderHistory", config)
       .then((res) => {
         // console.log(res.data);
         return res.data;

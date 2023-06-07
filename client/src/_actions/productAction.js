@@ -6,7 +6,7 @@ export default function useProducts() {
   const dispatch = useDispatch();
   const getProductList = (query) => {
     const result = axios
-      .get("http://localhost:4000/products", query)
+      .get("https://project-mern.vercel.app/products", query)
       .then((res) => {
         // console.log(res.data);
         return res.data;
@@ -29,7 +29,7 @@ export default function useProducts() {
 
   const getCategoryList = () => {
     const result = axios
-      .get("http://localhost:4000/categories")
+      .get("https://project-mern.vercel.app/categories")
       .then((res) => {
         // console.log(res.data);
         return res.data;
