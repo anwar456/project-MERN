@@ -6,7 +6,7 @@ export default function useProducts() {
   const dispatch = useDispatch();
   const getProductList = (query) => {
     const result = axios
-      .get("https://project-mern.vercel.app/products", query)
+      .post("https://project-mern.vercel.app/products", query)
       .then((res) => {
         // console.log(res.data);
         return res.data;
