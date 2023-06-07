@@ -5,7 +5,9 @@ const bodyParser = require("body-parser");
 
 const cors = require("cors");
 
-mongoose.connect("mongodb://127.0.0.1:27017/auth-app");
+mongoose.connect(
+  "mongodb+srv://anwar45584:8rQsps2P5EUAFVdL@mern-shop.0yx8kfh.mongodb.net/"
+);
 
 const app = express();
 
