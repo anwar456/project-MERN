@@ -150,7 +150,7 @@ function App() {
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          EduShop copy right &copy; 2022
+          EduShop copy right &copy; 2023
         </Footer>
       </Layout>
     </BrowserRouter>
