@@ -44,7 +44,7 @@ function App() {
         <Menu
           theme="light"
           mode="horizontal"
-          defaultSelectedKeys={["login"]}
+          defaultSelectedKeys={["home"]}
           onClick={handleLogout}
         >
           <Menu.Item key="home">
